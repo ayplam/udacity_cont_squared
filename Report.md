@@ -72,7 +72,8 @@ This is an example of a successful training example in which the agent was able 
 Due to this, the check to determine whether the agent had solved the environment was changed - instead of continuing to train the agent, once the agent was able to achieve a local average (as defined by the average reward over the past 5 episodes), training would stop, and the agent would best tested across 100 episodes. In addition, during the check, no noise would be added to the agent during the `act()` step. 
 ![Success, Fig3](success.png)
 
-Eliminating the noise has significant results on evaluating the performance of the agent. Adding a parameter to slowly decrease the amount of nosie added as the agent progresses training may be beneficial to properly gauge agent performamce
+Eliminating the noise has significant results on evaluating the performance of the agent. Adding a parameter to slowly decrease the amount of nosie added as the agent progresses training may be beneficial to properly gauge agent performance
+
 ![NoiseRewards, Fig4](RewardsWWONoise.png)
 
 These two items led to the most consistent results. This is slightly analogous to  training a conventional ML model - in which continuing to train an model may lead to divergence from the ideal solution as overfitting occurs. The appropriate stopping criteria to achieve the best model was necessary to consistently solve the environment.
